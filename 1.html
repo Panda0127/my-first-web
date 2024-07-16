@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>저를 소개합니다</title>
+    <meta charset="utf-8">
+    <style>
+        a {color:skyblue;
+        text-decoration:underline;}
+        .korea {color:skyblue;
+        text-decoration:none;}
+        #daum {color:blueviolet;}
+        h3 {color:gray;}
+        h1 {text-align: center;
+        border-width: 5px;
+        border-color:skyblue;
+        border-style:solid;
+        padding:20px;
+        margin:20px;}
+        div {border:5px solid skyblue; display:grid;
+        grid-template-columns: 100px 1fr;}
+        #gri {border:5px solid pink;}
+        @media(max-width:700px){#gri{display:none;}}
+    </style>
+</head>
+<body>
+    <h1>Lee Jeong In</h1>
+    <img src="Pr.png" width="280">
+    <ul>
+        <li>청라고등학교</li>
+        <li>2학년 7반</li>
+        <li>코딩랩 동아리</li>
+        <li><b>프로그래머</b> 희망</li>
+    </ul>
+    <h2>취미</h2>
+    <ol>
+        <li><a class="korea">음악 듣기</a></li>
+        <li>게임하기</li>
+        <li><a class="korea" id="daum">영화보기</a></li>
+    </ol>
+    <div id="gri">
+        <div>hello!</div>
+        <div>hahaha!</div>
+    </div>
+    <h3>"반갑습니다, 저는 <a href="http://cheongra.icehs.kr/main.do"
+        target="_blank">청라고등학교</a>에 재학중인 이정인입니다"</h3>
+    <h3>"저의 장래희망은 프로그래머가 되는 것입니다"</h3>
+    <input type="button" value="day" onclick="
+    if(document.querySelector('body').dataset.mode==='night'){
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('body').dataset.mode='day';
+    this.value='day';
+    }
+    else{
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('body').dataset.mode='night';
+    this.value='night';
+    }">
+</body>
+</html>
